@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>OG Banner — export me to 1200×630</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;1,500&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: #333; display: grid; place-items: center; min-height: 100vh; font-family: "Plus Jakarta Sans", sans-serif; }
+  /* This box is exactly the recommended social-share size. Screenshot/export JUST this box. */
+  .banner {
+    width: 1200px; height: 630px; position: relative; overflow: hidden; color: #fff;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(232,51,109,0.30), transparent 60%),
+      radial-gradient(700px 450px at 0% 110%, rgba(35,44,99,0.65), transparent 55%),
+      linear-gradient(160deg, #0d1330 0%, #131a3a 60%, #0b1024 100%);
+    padding: 80px 90px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .row { display: flex; align-items: center; gap: 22px; margin-bottom: 40px; }
+  .row img { width: 96px; height: 96px; border-radius: 50%; box-shadow: 0 18px 50px -18px rgba(232,51,109,0.8); }
+  .row b { font-size: 30px; font-weight: 700; letter-spacing: .5px; }
+  .row span { display: block; font-size: 15px; letter-spacing: .32em; text-transform: uppercase; color: rgba(255,255,255,.55); font-weight: 600; margin-top: 4px; }
+  h1 { font-family: "Playfair Display", serif; font-weight: 800; font-size: 84px; line-height: 1.02; letter-spacing: -1px; max-width: 900px; }
+  h1 em { font-style: italic; font-weight: 500;
+    background: linear-gradient(120deg, #f4548a, #ff7fa8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .chips { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 44px; }
+  .chips span { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); padding: 10px 20px; border-radius: 999px; font-size: 17px; font-weight: 600; }
+  .flake { position: absolute; color: rgba(244,84,138,.35); font-size: 120px; right: 70px; bottom: 40px; }
+  .hint { position: fixed; top: 16px; left: 16px; color: #fff; font-size: 13px; background: #e8336d; padding: 8px 14px; border-radius: 8px; }
+</style>
+</head>
+<body>
+  <div class="hint">Export only the 1200×630 box below → save as assets/images/og-banner.jpg</div>
+  <div class="banner" id="banner">
+    <div class="row">
+      <img src="images/logo.jpg" alt="The Social Snow logo" />
+      <div><b>The Social Snow</b><span>Break The Ice</span></div>
+    </div>
+    <h1>Building Brands That <em>Break The Ice.</em></h1>
+    <div class="chips">
+      <span>Content</span><span>Social Media</span><span>Performance Marketing</span><span>SEO</span><span>Branding</span>
+    </div>
+    <div class="flake">❄</div>
+  </div>
+</body>
+</html>
