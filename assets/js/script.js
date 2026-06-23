@@ -102,7 +102,7 @@
      👉 Replace CALENDLY_URL below with your real Calendly link after you
         create the account (e.g. "https://calendly.com/thesocialsnow/discovery-call").
         This is the ONLY place you need to change it. */
-  var CALENDLY_URL = "https://calendly.com/sample/30min";
+  var CALENDLY_URL = "https://calendly.com/contactthesocialsnow/meeting";
   document.querySelectorAll(".js-book-call").forEach(function (el) {
     el.addEventListener("click", function (ev) {
       ev.preventDefault();
