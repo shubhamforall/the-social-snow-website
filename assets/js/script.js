@@ -98,6 +98,23 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ---- Calendly booking popup ----
+     👉 Replace CALENDLY_URL below with your real Calendly link after you
+        create the account (e.g. "https://calendly.com/thesocialsnow/discovery-call").
+        This is the ONLY place you need to change it. */
+  var CALENDLY_URL = "https://calendly.com/sample/30min";
+  document.querySelectorAll(".js-book-call").forEach(function (el) {
+    el.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      if (window.Calendly && typeof window.Calendly.initPopupWidget === "function") {
+        window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else {
+        // Calendly script not ready — open the booking page in a new tab as a fallback
+        window.open(CALENDLY_URL, "_blank", "noopener");
+      }
+    });
+  });
+
   /* ---- Contact / quote form (demo handler -> mailto) ---- */
   document.querySelectorAll("form[data-mailto]").forEach(function (form) {
     form.addEventListener("submit", function (ev) {

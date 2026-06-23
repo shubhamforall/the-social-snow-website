@@ -26,6 +26,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Calendly booking widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
   <div class="scroll-progress"></div>
@@ -42,10 +46,10 @@
         <a href="services.html">Services</a>
         <a href="plans.html">Pricing</a>
         <a href="contact.html">Contact</a>
-        <a href="tel:+918104592634" class="btn btn-primary">Book a Call</a>
+        <a href="#" class="btn btn-primary js-book-call">Book a Call</a>
       </nav>
       <div class="nav__cta">
-        <a href="tel:+918104592634" class="btn btn-primary">Book a Free Call</a>
+        <a href="#" class="btn btn-primary js-book-call">Book a Free Call</a>
         <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span></button>
       </div>
     </div>
@@ -160,7 +164,7 @@
       <div class="cta-band reveal">
         <h2>Let's build your brand together.</h2>
         <p>Tell us about your goals and we'll show you what's possible. The first consultation is on us.</p>
-        <a href="contact.html" class="btn btn-primary">Book a Free Consultation
+        <a href="#" class="btn btn-primary js-book-call">Book a Free Consultation
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -197,7 +201,8 @@
         <div>
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html">Content Creation</a></li>
+            <li><a href="services.html#content">Content Creation</a></li>
+            <li><a href="services.html#production">Content Production</a></li>
             <li><a href="services.html">Social Media Mgmt</a></li>
             <li><a href="services.html">Performance Marketing</a></li>
             <li><a href="services.html">SEO</a></li>
@@ -210,7 +215,7 @@
             <li><a href="mailto:contactthesocialsnow@gmail.com">contactthesocialsnow@gmail.com</a></li>
             <li><a href="tel:+918104592634">+91 81045 92634</a></li>
             <li><a href="https://www.instagram.com/thesocialsnow" target="_blank" rel="noopener">@thesocialsnow</a></li>
-            <li><a href="tel:+918104592634">Book a Free Call</a></li>
+            <li><a href="#" class="js-book-call">Book a Free Call</a></li>
           </ul>
         </div>
       </div>

@@ -192,7 +192,7 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   padding: 150px 0 70px;
 }
 .hero > .container { width: 100%; }
-.hero__grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center; }
+.hero__grid { display: grid; grid-template-columns: 1.32fr 0.68fr; gap: 44px; align-items: center; }
 .hero__badge {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 8px 16px 8px 8px; border-radius: var(--radius-pill);
@@ -202,9 +202,11 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .hero__badge b { background: var(--grad-brand); padding: 4px 12px; border-radius: var(--radius-pill); font-weight: 700; }
 .hero h1 {
   font-family: var(--font-display); font-weight: 800;
-  font-size: clamp(2.7rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -1px;
+  font-size: clamp(2.3rem, 5vw, 4.05rem); line-height: 1.03; letter-spacing: -1px;
 }
 .hero h1 em { font-style: italic; color: var(--pink-300); font-weight: 600; }
+.hero h1 > span, .hero h1 > em { display: block; }
+@media (min-width: 600px) { .hero h1 > span, .hero h1 > em { white-space: nowrap; } }
 .hero__sub { margin-top: 24px; font-size: 1.15rem; color: rgba(255,255,255,0.76); max-width: 540px; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
 .hero__stats { display: flex; gap: 36px; margin-top: 48px; flex-wrap: wrap; }
@@ -235,15 +237,32 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
 
-.hero__marquee { margin-top: 70px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; }
+.hero__marquee { margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 26px; }
 
 /* ---------- Marquee ---------- */
 .marquee { overflow: hidden; -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .marquee__track { display: flex; gap: 56px; width: max-content; animation: scroll-x 26s linear infinite; }
 .marquee:hover .marquee__track { animation-play-state: paused; }
-.marquee__track span { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; opacity: 0.55; white-space: nowrap; display: inline-flex; align-items: center; gap: 56px; }
-.marquee__track span::after { content: "\2744"; font-style: normal; color: var(--pink-300); }
+.marquee__track a, .marquee__track span { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; opacity: 0.55; white-space: nowrap; display: inline-flex; align-items: center; gap: 56px; cursor: pointer; transition: opacity .25s, color .25s; }
+.marquee__track a::after, .marquee__track span::after { content: "\2744"; font-style: normal; color: var(--pink-300); }
+.marquee__track a:hover { opacity: 1; color: var(--pink-300); }
 @keyframes scroll-x { to { transform: translateX(-50%); } }
+
+/* ---------- Hero kicker (uppercase subtitle) ---------- */
+.hero__kicker { text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.92rem; font-weight: 600; color: rgba(255,255,255,0.72); }
+
+/* ---------- Hero "proof" logo strip (white logos on dark) ---------- */
+.hero__trust { margin-top: 54px; }
+.hero__trust-title {
+  font-family: var(--font-display); font-weight: 800; color: #fff;
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem); display: inline-flex; align-items: center; gap: 12px;
+  padding: 0 40px 14px 0; border-bottom: 2px solid rgba(255,255,255,0.16);
+}
+.hero__logos { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 22px 52px; }
+.hero__logos img { width: 200px; height: 84px; object-fit: contain; opacity: 0.85; transition: opacity .35s var(--ease), transform .35s var(--ease); }
+.hero__logos img.logo-badge { width: 96px; }
+.hero__logos img:hover { opacity: 1; transform: translateY(-3px); }
+@media (max-width: 560px) { .hero__logos { gap: 18px 30px; } .hero__logos img { width: 140px; height: 60px; } .hero__logos img.logo-badge { width: 68px; } }
 
 /* ---------- About preview ---------- */
 .founder { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
