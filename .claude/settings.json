@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:thesocialsnow.com)",
+      "WebFetch(domain:calendly.com)"
+    ]
+  }
+}
